@@ -1,0 +1,21 @@
+{
+  "name": "pet-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rashi Jaiswal",
+  "license": "ISC",
+  "dependencies": {
+    "ethereumjs-tx": "^2.1.1",
+    "lite-server": "^2.5.4",
+    "solc": "^0.5.13",
+    "web3": "^1.2.4"
+  }
+}

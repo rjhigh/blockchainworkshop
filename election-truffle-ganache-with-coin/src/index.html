@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Election</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="w3-gray">
+  <!-- style="background-image: url('bck-xs.png')" style="width: 10px;"-->
+  <div class="col-lg-4" >
+    <img src="images/Didnt-vote-You-cant-whine-then.jpg" class="w3-round-xxlarge" style="margin:20px; width:400px; height:600px">
+  </div>
+  <!-- style="background-image: url('bck-xs.png')"> -->
+  <div class="col-lg-12" style="width: 800px;">
+    <!-- class="container" style="width: 650px;"> class="w3-content"-->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="w3-round-xxlarge w3-light-gray">
+          <h1 class="text-center">Great Indian Voting Festival</h1>
+          <br>
+          <p id="accountAddress" class="text-center"></p>
+          <br>
+        </div>
+        <br>
+        <br>
+        <div class="w3-round-xxlarge w3-card-4 w3-light-gray">
+          <div id="buyTokens" class="col-lg-8">
+            <h3>Buy Tokens:</h3>
+            <input type="text" style="width:300px" placeholder="Enter address" />
+            <button type="submit" id="buyBtn" onClick="App.buyTokens()" class="btn btn-primary">Buy</button>
+          </div>
+          <div id="statsToken" class="col-lg-4">
+            <h3>Tokens Stats</h3>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Property</th>
+                  <th scope="col">Amount</th>
+                </tr>
+              </thead>
+              <tbody id="tokenStats">
+              </tbody>
+            </table>
+          </div>
+          <br>
+          <!-- <hr /> -->
+          <div id="authorize" class="col-lg-12">
+            <h3>Authorize Admin to tranfer tokens:</h3>
+            <p>I authorize the admin to use my current balance in order to facilitate the voting procedure.</p>
+            <button type="submit" id="authorizeBtn" onClick="App.authorizeOwner()"
+              class="btn btn-primary">Authorize</button>
+          </div>
+          <br>
+          <!-- <hr /> -->
+          <div id="loader">
+            <h2 class="text-center">Election Results</h2>
+            <hr />
+            <br />
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="content" style="display: none;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Votes</th>
+                </tr>
+              </thead>
+              <tbody id="candidatesResults">
+              </tbody>
+            </table>
+            <!-- <hr /> -->
+            <form onSubmit="App.castVote(); return false;">
+              <div class="form-group">
+                <label for="candidatesSelect">Select Proposal</label>
+                <select class="form-control" id="candidatesSelect">
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Vote</button>
+              <!-- <hr /> -->
+            </form>
+            <br>
+            <p id="status"></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

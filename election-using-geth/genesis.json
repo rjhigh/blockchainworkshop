@@ -1,0 +1,16 @@
+{
+	"config": {
+		"chainId":11122019,
+		"homesteadBlock": 0,
+		"eip150Block": 0,
+		"eip155Block": 0,
+		"eip158Block": 0,
+		"constantinopleBlock" : 0,
+		"petersburgBlock" : 0
+	},
+	"difficulty":"1",
+	"gasLimit":"6721975",
+	"alloc":{
+		"0x2d9a98fD01FC7228Defc26E8d6d8E098840C26f7" : {"balance": "15000000000000000000"}
+	}
+}
