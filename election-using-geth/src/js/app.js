@@ -111,7 +111,7 @@ App = {
 
   castVote: function() {
     let candidateId = $('#candidatesSelect').val();
-      const password = "manifest";
+      const password = "passwordforcreatedaccount";
       web3.eth.personal.unlockAccount(App.account, password, 1000000, (error, data) => {
         if(error) { console.log('Error while unlocking account-->', error);}
         App.contract.methods.vote(candidateId).send({from: App.account}, (error, result) => {
